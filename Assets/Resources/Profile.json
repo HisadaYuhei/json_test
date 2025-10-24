@@ -1,0 +1,25 @@
+{
+  "profiles": [
+    {
+      "name": "山田 太郎",
+      "age": 30,
+      "email": "taro.yamada@example.com",
+      "isStudent": false,
+      "courses": []
+    },
+    {
+      "name": "佐藤 花子",
+      "age": 25,
+      "email": "hanako.sato@example.com",
+      "isStudent": true,
+      "courses": []
+    },
+    {
+      "name": "鈴木 一郎",
+      "age": 42,
+      "email": "ichiro.suzuki@example.com",
+      "isStudent": false,
+      "courses": []
+    }
+  ]
+}
