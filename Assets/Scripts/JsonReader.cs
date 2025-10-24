@@ -25,5 +25,26 @@ public class JsonReader : MonoBehaviour
         {
             Debug.Log($"[{i}] 名前: {profileList.profiles[i].name}, 年齢: {profileList.profiles[i].age}");
         }
+        
+        Debug.Log("--- 全員の履修コース ---");
+        // 1. まず、プロフィールのリストから一人ずつ取り出す (外側のループ)
+        foreach (Profile personProfile in profileList.profiles)
+        {
+            // 誰のコースリストか分かりやすいように名前を表示
+            Debug.Log($"--- {personProfile.name}さんの履修コース ---");
+
+            // もしコースが一つも登録されていない場合はスキップ
+            if (personProfile.courses.Count == 0)
+            {
+                Debug.Log("履修コースはありません。");
+                continue; // 次の人の処理へ
+            }
+
+            // 2. 次に、その人のコースリストからコースを一つずつ取り出す (内側のループ)
+            foreach (Course course in personProfile.courses)
+            {
+                Debug.Log($"コース名: {course.title}, 単位数: {course.credits}");
+            }
+        }
     }
 }
